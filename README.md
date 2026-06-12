@@ -6,9 +6,10 @@ A lightweight neuroimaging pipeline for:
 ✓ Functional connectivity analysis
 ✓
 ✓
+```
 
 ## Analysis Pipeline
-
+```text
 Preprocessed fMRI
         │
         ▼
