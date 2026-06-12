@@ -1,5 +1,5 @@
 # fMRI-Connectivity-Analysis
-'''text
+```text
 
 A lightweight neuroimaging pipeline for: 
 ✓ ROI extraction 
