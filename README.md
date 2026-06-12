@@ -1,12 +1,10 @@
 # fMRI-Connectivity-Analysis
-```text
 
-A lightweight neuroimaging pipeline for: 
-✓ ROI extraction 
-✓ Functional connectivity analysis
-✓
-✓
-```
+A lightweight neuroimaging pipeline for:  
+✓ ROI extraction  
+✓ Functional connectivity analysis  
+✓  
+✓  
 
 ## Analysis Pipeline
 ```text
