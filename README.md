@@ -1,10 +1,10 @@
 # fMRI-Connectivity-Analysis
 
 A lightweight neuroimaging pipeline for: <br>
-✓ ROI extraction
-✓ Functional connectivity analysis
-✓ 
-✓ 
+✓ ROI extraction <br>
+✓ Functional connectivity analysis <br>
+✓ <br>
+✓ <br>
 
 Built with:
 - Python
