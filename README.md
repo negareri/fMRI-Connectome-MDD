@@ -1,11 +1,28 @@
 # fMRI-Connectivity-Analysis
+'''text
 
-A lightweight neuroimaging pipeline for: <br>
-✓ ROI extraction <br>
-✓ Functional connectivity analysis <br>
-✓ <br>
-✓ <br>
+A lightweight neuroimaging pipeline for: 
+✓ ROI extraction 
+✓ Functional connectivity analysis
+✓
+✓
 
-Built with:
-- Python
-- 
+## Analysis Pipeline
+
+Preprocessed fMRI
+        │
+        ▼
+ROI Time Series Extraction
+        │
+        ▼
+Functional Connectivity Matrix
+        │
+ ┌──────┴──────┐
+ ▼             ▼
+Edge Features  Graph Features
+ │             │
+ ├─ PCA        ├─ Degree
+ └─            ├─ Clustering Coefficient
+               ├─ Global Efficiency
+               └─ Modularity
+```
