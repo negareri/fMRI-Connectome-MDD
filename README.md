@@ -1,26 +1,6 @@
-# fMRI-Connectivity-Analysis
-A lightweight neuroimaging pipeline for:
-- ROI extraction
-- Functional connectivity analysis
-- 
-- 
+# fMRI-Connectome-MDD
 
-## Analysis Pipeline
-```text
-Preprocessed fMRI
-        │
-        ▼
-ROI Time Series Extraction
-        │
-        ▼
-Functional Connectivity Matrix
-        │
- ┌──────┴──────┐
- ▼             ▼
-Edge Features  Graph Features
- │             │
- ├─ PCA        ├─ Degree
- └─            ├─ Clustering Coefficient
-               ├─ Global Efficiency
-               └─ Modularity
-```
+This repository contains a reproducible pipeline for resting-state fMRI analysis using the OpenNeuro dataset **ds002748**, which includes 21 healthy controls and 51 patients with Major Depressive Disorder (MDD). The project is designed to run entirely on Google Colab without requiring manual data downloads and provides step-by-step notebooks for functional connectome analysis and machine learning experiments.
+
+
+## ⚙️ Pipeline Steps:
