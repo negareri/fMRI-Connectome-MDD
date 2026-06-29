@@ -1,4 +1,7 @@
 # fMRI-Connectome-MDD 
-This repository contains a reproducible pipeline for resting-state fMRI analysis using the OpenNeuro dataset [**ds002748**](https://openneuro.org/datasets/ds002748). The project is designed to run entirely on Google Colab without requiring manual data downloads and provides step-by-step notebooks for functional connectivity analysis and machine learning workflows.
+This repository provides a  reproducible pipeline for functional connectivity (FC) and machine learning (ML) analysis of resting-state fMRI data.
+We analyze the preprocessed fMRIPrep outputs from the OpenNeuro dataset [**ds002748**](https://openneuro.org/datasets/ds002748).
+The entire workflow is structured as step-by-step notebooks that run directly on Google Colab—no manual data downloading required.
+
 
 
