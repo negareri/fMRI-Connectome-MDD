@@ -10,18 +10,13 @@ The entire workflow is structured as step-by-step notebooks that run directly on
 - Downloads preprocessed fMRI data and confounds (~5 min)
 - Extracts regional time-series based on AAL116 atlas.
 
-
-### Notebook 2: Brain Activity Visualization
-- Visualizes extracted time series as brain animations
-
-
-### Notebook 3: Functional Connectivity Calculation
+### Notebook 2: Functional Connectivity Calculation
 - Computes multiple FC measures (e.g., Pearson correlation, partial correlation, etc.)
 - Creates feature vectors from different FC methods for comparison
 
 
-### Notebook 4: Feature Selection & Dimensionality Reduction
+### Notebook 3: Feature Selection & Dimensionality Reduction
 - Applies feature selection techniques to identify the most discriminative connections between patients and controls
 
 
-### Notebook 5: Classification & Interpretation
+### Notebook 4: Classification & Interpretation
