@@ -8,7 +8,7 @@ The entire workflow is structured as step-by-step notebooks that run directly on
 ## 📝Pipeline Overview:
 ### Notebook 1: Data Download & Time Series Extraction
 - Downloads preprocessed fMRI data and confounds (~5 min)
-- Extracts regional time-series based on AAL116 atlas.
+- Extracts regional time-series based on AAL3 atlas.
 
 ### Notebook 2: Functional Connectivity Calculation
 - Computes multiple FC measures (e.g., Pearson correlation, partial correlation, etc.)
