@@ -6,9 +6,16 @@ The entire workflow is structured as step-by-step notebooks that run directly on
 <br>
 <br>
 ## 📝Pipeline Overview:
-### Notebook 1: Data Download & Time Series Extraction
-- Downloads preprocessed fMRI data and confounds (~5 min)
-- Extracts regional time-series based on AAL3 atlas.
+### Notebook 1: Data Download & ROI Time-Series Extraction
+- Downloads preprocessed resting-state fMRI data and confound regressors from OpenNeuro (~5 min).
+- Applies confound regression, detrending, band-pass filtering, and z-score standardization.
+- Extracts ROI time series using the AAL3 atlas.
+- Saves the extracted time-series matrices and metadata as:
+  timeseries/ <br>
+  ├── sub-01_timeseries.npy <br>
+  ├── ... <br>
+  ├── sub-72_timeseries.npy <br>
+  └── extraction_metadata.json
 
 ### Notebook 2: Functional Connectivity Calculation
 - Computes multiple FC measures (e.g., Pearson correlation, partial correlation, etc.)
