@@ -18,9 +18,13 @@ The entire workflow is structured as step-by-step notebooks that run directly on
   └── extraction_metadata.json
 
 ### Notebook 2: Functional Connectivity Calculation
-- Computes multiple FC measures (e.g., Pearson correlation, partial correlation, etc.)
-- Creates feature vectors from different FC methods for comparison
-
+- Computes static functional connectivity using Pearson correlation and partial correlation.
+- Converts connectivity matrices into upper-triangular feature vectors for machine learning.
+- Generates four outputs:
+  - Pearson FC matrices
+  - Partial FC matrices
+  - Pearson feature vectors
+  - Partial feature vectors
 
 ### Notebook 3: Feature Selection & Dimensionality Reduction
 - Applies feature selection techniques to identify the most discriminative connections between patients and controls
