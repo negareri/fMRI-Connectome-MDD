@@ -10,7 +10,7 @@ The entire workflow is structured as step-by-step notebooks that run directly on
 - Downloads preprocessed resting-state fMRI data and confound regressors from OpenNeuro (~5 min).
 - Applies confound regression, detrending, band-pass filtering, and z-score standardization.
 - Extracts ROI time series using the AAL3 atlas.
-- Saves the extracted time-series matrices and metadata as: <br>
+- Saves the extracted time-series matrices and metadata as AAL3_timeseries_all_subjects.zip: <br>
   timeseries/ <br>
   ├── sub-01_timeseries.npy <br>
   ├── ... <br>
