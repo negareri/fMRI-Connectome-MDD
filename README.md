@@ -7,27 +7,18 @@ The entire workflow is structured as step-by-step notebooks that run directly on
 <br>
 ## 📝Pipeline Overview:
 ### Notebook 1: Data Download & ROI Time-Series Extraction
-- Downloads preprocessed resting-state fMRI data and confound regressors from OpenNeuro (~5 min).
+- Downloads preprocessed resting-state fMRI data and confound regressors from OpenNeuro.
 - Applies confound regression, detrending, band-pass filtering, and z-score standardization.
-- Extracts ROI time series using the AAL3 atlas.
-- Saves the extracted time-series matrices and metadata as AAL3_timeseries_all_subjects.zip: <br>
-  timeseries/ <br>
-  ├── sub-01_timeseries.npy <br>
-  ├── ... <br>
-  ├── sub-72_timeseries.npy <br>
-  └── extraction_metadata.json
+- Extracts ROI time series using the AAL3 atlas and exports the processed dataset for downstream analysis.
 
 ### Notebook 2: Functional Connectivity Calculation
 - Computes static functional connectivity using Pearson correlation and partial correlation.
-- Converts connectivity matrices into upper-triangular feature vectors for machine learning.
-- Generates four outputs:
-  - Pearson FC matrices
-  - Partial FC matrices
-  - Pearson feature vectors
-  - Partial feature vectors
+- Converts connectivity matrices into upper-triangular feature vectors and subject-by-feature matrices.
+- Exports connectivity and feature representations for downstream machine learning.
 
 ### Notebook 3: Feature Selection & Dimensionality Reduction
-- Applies feature selection techniques to identify the most discriminative connections between patients and controls
-
+- Explores feature selection and dimensionality reduction methods, including ANOVA, LASSO, and PCA.
+- Visualizes and compares the selected features and reduced representations.
+- Prepares feature reduction strategies for the machine learning pipeline.
 
 ### Notebook 4: Classification & Interpretation
