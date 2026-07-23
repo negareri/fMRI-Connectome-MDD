@@ -4,7 +4,7 @@
 
 | Pearson Connectivity ANOVA | Partial Connectivity ANOVA |
 | :---: | :---: |
-| ![ANOVA Pearson]([figs/anova_pearson_circle.png]) | ![ANOVA Partial]([figs/anova_partial_circle.png]) |
+| ![ANOVA Pearson](figs/anova_pearson_circle.png) | ![ANOVA Partial](figs/anova_partial_circle.png) |
 
 ### Top 5 Selected Connections (ANOVA)
 
