@@ -1,4 +1,11 @@
-# Notebook3 Outputs
+# Notebook 3 Outputs
+
+Generated files:
+
+- `participants_with_labels.csv` – Participant metadata with the generated binary class labels.
+- `figs/` – ANOVA, LASSO, and PCA figures.
+
+---
 
 ## 1. Analysis of Variance (ANOVA / F-test)
 
@@ -92,4 +99,4 @@
 
 | Pearson Connectivity PCA Projection | Partial Connectivity PCA Projection |
 | :---: | :---: |
-| ![PCA Pearson](figs/pca_pearson_projection.png) | ![PCA Partial](figs/lasso_partial_projection.png) |
+| ![PCA Pearson](figs/pca_pearson_projection.png) | ![PCA Partial](figs/pca_partial_projection.png) |
