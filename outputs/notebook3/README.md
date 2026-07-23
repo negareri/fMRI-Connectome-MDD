@@ -45,17 +45,16 @@
 
 | Pearson Connectivity LASSO | Partial Connectivity LASSO |
 | :---: | :---: |
-| ![LASSO Pearson](figs/lasso_pearson.png) | ![LASSO Partial](figs/lasso_partial.png) |
+| ![LASSO Pearson](figs/lasso_pearson_circle.png) | ![LASSO Partial](figs/lasso_partial_circule.png) |
 
 <table>
 <tr>
 <td valign="top">
-  
-### Top 5 Selected Connections (LASSO)
 
 #### A. Pearson LASSO (Top 5)
-| Rank | ROI 1 | ROI 2 | Coefficient (Weight) |
-| :---: | :--- | :--- | :---: |
+
+| Rank | ROI 1 | ROI 2 | Coefficient |
+|:---:|:---|:---|:---:|
 | **1** | Thal_AV_R | SN_pr_R | -0.7431 |
 | **2** | Cerebellum_8_R | Thal_PuI_R | 0.6001 |
 | **3** | SN_pc_L | LC_R | -0.4707 |
@@ -67,8 +66,9 @@
 <td valign="top">
 
 #### B. Partial LASSO (Top 5)
-| Rank | ROI 1 | ROI 2 | Coefficient (Weight) |
-| :---: | :--- | :--- | :---: |
+
+| Rank | ROI 1 | ROI 2 | Coefficient |
+|:---:|:---|:---|:---:|
 | **1** | SupraMarginal_L | Temporal_Inf_R | -0.5064 |
 | **2** | Frontal_Inf_Orb_2_L | ACC_sub_L | 0.4001 |
 | **3** | Frontal_Med_Orb_R | Temporal_Pole_Mid_L | 0.3693 |
@@ -78,5 +78,4 @@
 </td>
 </tr>
 </table>
-
 ---
