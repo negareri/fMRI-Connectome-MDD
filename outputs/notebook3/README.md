@@ -45,7 +45,7 @@
 
 | Pearson Connectivity LASSO | Partial Connectivity LASSO |
 | :---: | :---: |
-| ![LASSO Pearson](figs/lasso_pearson_circle.png) | ![LASSO Partial](figs/lasso_partial_circule.png) |
+| ![LASSO Pearson](figs/lasso_pearson_circle.png) | ![LASSO Partial](figs/lasso_partial_circle.png) |
 
 <table>
 <tr>
