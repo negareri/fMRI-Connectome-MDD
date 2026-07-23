@@ -55,11 +55,11 @@
 
 | Rank | ROI 1 | ROI 2 | Coefficient |
 |:---:|:---|:---|:---:|
-| **1** | Thal_AV_R | SN_pr_R | -0.7431 |
-| **2** | Cerebellum_8_R | Thal_PuI_R | 0.6001 |
-| **3** | SN_pc_L | LC_R | -0.4707 |
-| **4** | OFCant_L | Temporal_Pole_Mid_L | 0.3259 |
-| **5** | Thal_VL_L | ACC_sub_R | -0.3135 |
+| **1** | Thal_AV_R | SN_pr_R | -0.74 |
+| **2** | Cerebellum_8_R | Thal_PuI_R | 0.60 |
+| **3** | SN_pc_L | LC_R | -0.47 |
+| **4** | OFCant_L | Temporal_Pole_Mid_L | 0.33 |
+| **5** | Thal_VL_L | ACC_sub_R | -0.31 |
 
 </td>
 
@@ -69,13 +69,27 @@
 
 | Rank | ROI 1 | ROI 2 | Coefficient |
 |:---:|:---|:---|:---:|
-| **1** | SupraMarginal_L | Temporal_Inf_R | -0.5064 |
-| **2** | Frontal_Inf_Orb_2_L | ACC_sub_L | 0.4001 |
-| **3** | Frontal_Med_Orb_R | Temporal_Pole_Mid_L | 0.3693 |
-| **4** | Calcarine_L | SupraMarginal_L | 0.3515 |
-| **5** | Parietal_Sup_L | Thal_AV_L | -0.3132 |
+| **1** | SupraMarginal_L | Temporal_Inf_R | -0.51 |
+| **2** | Frontal_Inf_Orb_2_L | ACC_sub_L | 0.40 |
+| **3** | Frontal_Med_Orb_R | Temporal_Pole_Mid_L | 0.37 |
+| **4** | Calcarine_L | SupraMarginal_L | 0.35 |
+| **5** | Parietal_Sup_L | Thal_AV_L | -0.31 |
 
 </td>
 </tr>
 </table>
+
 ---
+
+## 3. PCA Dimensionality Reduction
+
+| Connectivity Matrix | Original Features | PCA Components | Explained Variance |
+|---|---:|---:|---:|
+| Pearson | 13695 | [70] | 99% |
+| Partial | 13695 | [71] | 99% |
+
+### PCA Projection
+
+| Pearson Connectivity PCA Projection | Partial Connectivity PCA Projection |
+| :---: | :---: |
+| ![PCA Pearson](figs/pca_pearson_projection.png) | ![PCA Partial](figs/lasso_partial_projection.png) |
