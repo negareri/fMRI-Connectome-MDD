@@ -21,7 +21,21 @@
 │   └── Combined Pearson feature matrix
 │       (72 participants × 13,695 connectivity features)
 │
-└── X_partial.npy
-    └── Combined partial feature matrix
-        (72 participants × 13,695 connectivity features)
+├── X_partial.npy
+│   └── Combined partial feature matrix
+│       (72 participants × 13,695 connectivity features)
+│
+└── figs/
+    ├── pearson_matrix_example.png
+    └── partial_matrix_example.png
+
+
 ```
+
+## Connectivity Matrices
+
+The following examples show Pearson and partial connectivity matrices generated for participant **sub-01**.
+
+| Pearson Connectivity Matrix | Partial Connectivity Matrix |
+|:---:|:---:|
+| ![Pearson FC](figs/pearson_matrix_example.png) | ![Partial FC](figs/partial_matrix_example.png) |
