@@ -18,7 +18,7 @@ Balanced Accuracy was used as the primary ranking metric because the dataset is 
 
 ## 1. Best and Worst Performing Models
 
-### Best Performing Model
+### Best Performing Models
 
 | Rank | Connectivity | Feature Type | Classifier | Balanced Accuracy | Accuracy | Sensitivity | Specificity | F1-score |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -35,9 +35,35 @@ Balanced Accuracy was used as the primary ranking metric because the dataset is 
 | **Worst** | Partial | ANOVA | RF | **0.50** | 0.71 | 1.00 | 0.00 | 0.83 |
 
 Note: Several configurations collapsed to the majority-class baseline (predicting all subjects as MDD). Since MDD subjects make up exactly ~71% of the dataset (51 out of 72), these dummy predictions yield an accuracy of 0.71 but a balanced accuracy of exactly 0.50.
+
 ---
 
-## 2. Overall Effect of Connectivity, Feature Type, and Classifier
+## 2. Model Comparison Heatmaps
+
+<table>
+<tr>
+<td valign="top">
+
+### Pearson Connectivity
+
+![Pearson Model Comparison](figs/pearson_model_comparison.png)
+
+</td>
+<td valign="top">
+
+### Partial Connectivity
+
+![Partial Model Comparison](figs/partial_model_comparison.png)
+
+</td>
+</tr>
+</table>
+
+These heatmaps show the Balanced Accuracy of all **12 Pearson-based models** and **12 Partial-based models**.  
+
+---
+
+## 3. Overall Effect of Connectivity, Feature Type, and Classifier
 
 <table>
 <tr>
@@ -80,31 +106,6 @@ Note: Several configurations collapsed to the majority-class baseline (predictin
 Pearson connectivity performed better than partial connectivity on average.  
 Among feature representations, **PCA** and **LASSO** gave the strongest results.  
 Among classifiers, **SVM** achieved the best average performance.
-
----
-
-## 3. Model Comparison Heatmaps
-
-<table>
-<tr>
-<td valign="top">
-
-### Pearson Connectivity
-
-![Pearson Model Comparison](figs/pearson_model_comparison.png)
-
-</td>
-<td valign="top">
-
-### Partial Connectivity
-
-![Partial Model Comparison](figs/partial_model_comparison.png)
-
-</td>
-</tr>
-</table>
-
-These heatmaps show the Balanced Accuracy of all **12 Pearson-based models** and **12 Partial-based models**.  
 
 ---
 
