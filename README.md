@@ -21,9 +21,8 @@ The entire workflow is structured as step-by-step notebooks that run directly on
 - Visualizes and compares the selected features and reduced representations.
 - Prepares feature reduction strategies for the machine learning pipeline.
 
-### Notebook 4: Classification & Interpretation
+### Notebook 4: Classification & Comparison
 - Builds complete machine learning pipelines using SVM, K-Nearest Neighbors (KNN), and Random Forest (RF).
 - Evaluates four feature representations: Original Connectivity, ANOVA-selected features, LASSO-selected features, and PCA-reduced features.
 - Performs hyperparameter optimization using stratified cross-validation with GridSearchCV.
 - Compares all 24 model configurations using Accuracy, Balanced Accuracy, Sensitivity, Specificity, and F1-score.
-- Summarizes the best-performing models and visualizes the selected functional connections for the top feature-selection methods.
