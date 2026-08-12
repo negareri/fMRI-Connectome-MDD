@@ -72,7 +72,7 @@ OpenNeuro ds002748 fMRIPrep derivatives
 Run the notebooks in order. Each notebook installs its own runtime dependencies and either generates or downloads the inputs it needs.
 
 | Step | Notebook | Purpose | Open in Colab |
-| --- | --- | --- | --- |
+| :---: | :---: | --- | :---: |
 | 1 | `ds002748_Notebook1.ipynb` | Download derivatives and extract AAL3 ROI time series | [Open](https://colab.research.google.com/github/negareri/fMRI-Connectome-MDD/blob/main/notebooks/ds002748_Notebook1.ipynb) |
 | 2 | `ds002748_Notebook2.ipynb` | Estimate Pearson and partial connectivity | [Open](https://colab.research.google.com/github/negareri/fMRI-Connectome-MDD/blob/main/notebooks/ds002748_Notebook2.ipynb) |
 | 3 | `ds002748_Notebook3.ipynb` | Inspect labels; explore ANOVA, LASSO, and PCA | [Open](https://colab.research.google.com/github/negareri/fMRI-Connectome-MDD/blob/main/notebooks/ds002748_Notebook3.ipynb) |
@@ -178,7 +178,7 @@ The repository includes precomputed feature matrices and a summary of the 24 con
 ## Outputs
 
 | Stage | Main artifacts |
-| --- | --- |
+| :---: | --- |
 | Notebook 1 | `AAL3_timeseries_all_subjects.zip`: per-subject `*_timeseries.npy` files plus `extraction_metadata.json` ROI-column mapping |
 | Notebook 2 | Pearson/partial FC matrix archives; feature-vector archives; `X_pearson.npy` and `X_partial.npy` (`72 × 13,695`) |
 | Notebook 3 | `participants_with_labels.csv`, feature-selection visualizations and PCA summaries |
