@@ -8,7 +8,6 @@ The project uses fMRIPrep derivatives of the OpenNeuro **[ds002748](https://open
   <img src="assets/pipeline-overview.svg" alt="Four-stage pipeline: prepare OpenNeuro derivatives, extract AAL3 signals, calculate connectomes, and compare ML pipelines" width="100%">
 </p>
 
-> **Research use only — not a clinical tool.** Results in this repository are exploratory and must not be used for diagnosis, treatment decisions, or claims of clinical utility. The dataset is small and imbalanced; see [Interpretation and limitations](#interpretation-and-limitations).
 
 ## Contents
 
@@ -20,7 +19,6 @@ The project uses fMRIPrep derivatives of the OpenNeuro **[ds002748](https://open
 - [Methods at a glance](#methods-at-a-glance)
 - [Included results](#included-results)
 - [Outputs](#outputs)
-- [Reproducibility notes](#reproducibility-notes)
 - [Interpretation and limitations](#interpretation-and-limitations)
 - [Citation and data attribution](#citation-and-data-attribution)
 
@@ -41,7 +39,7 @@ The project uses fMRIPrep derivatives of the OpenNeuro **[ds002748](https://open
 | Imaging inputs | fMRIPrep preprocessed resting-state BOLD images and confound time series |
 | Participants | 72 total |
 | Groups | 51 MDD; 21 healthy controls (HC) |
-| Label coding | `0 = control`, `1 = depr` (derived from `participants.tsv`) |
+| Label coding | `0 = control`, `1 = depr` |
 | Parcellation | AAL3; 166 active ROIs |
 | Connectivity features | 13,695 unique ROI-pair edges per participant (`166 × 165 / 2`) |
 
@@ -80,7 +78,7 @@ Run the notebooks in order. Each notebook installs its own runtime dependencies 
 | 3 | `ds002748_Notebook3.ipynb` | Inspect labels; explore ANOVA, LASSO, and PCA | [Open](https://colab.research.google.com/github/negareri/fMRI-Connectome-MDD/blob/main/notebooks/ds002748_Notebook3.ipynb) |
 | 4 | `ds002748_Notebook4.ipynb` | Tune and compare classification pipelines | [Open](https://colab.research.google.com/github/negareri/fMRI-Connectome-MDD/blob/main/notebooks/ds002748_Notebook4.ipynb) |
 
-> **Tip:** Notebooks 2–4 can fetch the archived/intermediate repository outputs required for their respective stages. Running all four in sequence remains the clearest way to reproduce the complete workflow.
+> **Tip:** Notebooks 2–4 can fetch the archived/intermediate repository outputs required for their respective stages.
 
 ### Local execution
 
@@ -147,7 +145,6 @@ The matrix is the complete pairwise connectivity representation for one particip
   </tr>
 </table>
 
-In the circular plot, red and blue chords show the sign and magnitude of the LASSO coefficient (with MDD encoded as `1`); they do **not** by themselves establish disease-specific biomarkers. See the full [Notebook 3 outputs](outputs/notebook3/README.md) for Pearson/partial ANOVA and LASSO connectome plots.
 
 ### 3. Feature representations
 
@@ -177,11 +174,6 @@ The repository includes precomputed feature matrices and a summary of the 24 con
   <img src="assets/model-results.svg" alt="Top exploratory model configurations and a caution that the results are not clinical performance estimates" width="100%">
 </p>
 
-| Top configuration | Balanced accuracy | Accuracy | Sensitivity | Specificity | F1 |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Pearson + PCA + SVM | 0.69 | 0.58 | 0.43 | 0.95 | 0.59 |
-
-The same summary reports Pearson + LASSO + SVM with balanced accuracy 0.67 and sensitivity 0.86, illustrating why a single metric should not drive interpretation. These figures describe this particular resampling/evaluation setup only; they are **not** clinical performance estimates.
 
 ## Outputs
 
@@ -193,13 +185,6 @@ The same summary reports Pearson + LASSO + SVM with balanced accuracy 0.67 and s
 | Notebook 4 | Performance tables and Pearson/partial model-comparison heatmaps |
 
 See the README in each [`outputs/`](outputs) subdirectory for stage-specific output descriptions and figures.
-
-## Reproducibility notes
-
-- Participant metadata are sorted by `participant_id` before labels are paired with connectivity features. Preserve this ordering if adapting the pipeline.
-- The notebook pipelines place scaling and feature transformation inside the estimator passed to cross-validation, avoiding fit-on-test-fold leakage for those steps.
-- Dependencies are installed in the notebooks rather than pinned in an environment file. For durable reproduction, record the Python/package versions used in your runtime and consider exporting a lockfile.
-- Network access is required for OpenNeuro, AAL3, and repository artifact downloads.
 
 ## Interpretation and limitations
 
@@ -215,14 +200,4 @@ This repository is designed as an educational/research workflow, not as a deploy
 
 If you use or adapt this work, please cite the repository and cite/acknowledge the source dataset according to the [OpenNeuro ds002748 dataset page](https://openneuro.org/datasets/ds002748).
 
-```text
-negareri. fMRI-Connectome-MDD: Resting-state fMRI functional connectivity
-analysis and machine learning pipeline for MDD classification.
-https://github.com/negareri/fMRI-Connectome-MDD
-```
-
 Please also retain the attribution and terms associated with fMRIPrep, Nilearn, the AAL3 atlas, and all other resources used by the workflow.
-
-## Contributing
-
-Issues and pull requests are welcome. For substantive changes, please describe the rationale, keep transformations inside validation pipelines, and avoid interpreting exploratory model results as clinical claims.
